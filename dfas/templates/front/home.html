@@ -1,0 +1,160 @@
+{% extends 'front/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    <meta charset="utf-8">
+    <title>GenN </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'front/img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'front/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Hero Start -->
+    <div class="hero">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-sm-6 col-md-5">
+                    <div class="hero-text">
+                        <h1>GenN</h1>
+                        <p>
+                            Bermain video game bisa memperbesar ukuran otak, bahkan memperkuat ingatan dan skill motorik lo. Main game online ataupun offline minimal 30 menit sehari bahkan terbukti bisa memperbaiki kualitas hidup!
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 d-none d-md-block">
+                    <div class="hero-image">
+                        <img src="{% static 'front/img/5853414.png' %}" alt="Hero Image" style="width:250px;height:250px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+  <!-- About Start -->
+  <div class="about wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6">
+                <div class="about-img">
+                    <img src="{% static 'front/img/5260498.png' %}" alt="Image">
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-6">
+                <div class="section-header text-left">
+                    <p>Learn About Us</p>
+                    <h2>Welcome to Grev</h2>
+                </div>
+                <div class="about-text">
+                    <p>
+                        Apa itu GenN??
+                    </p>
+                    <a class="btn" href="{% url 'about' %}">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+ <!-- Service Start -->
+ <div class="service">
+    <div class="container">
+        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <p>Coming Soon</p>
+            <h2>New Games</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+                <div class="service-item">
+                    <div class="testimonial-img">
+                        <img src="{% static 'front/img/ds.jpg' %}" alt="Image" style="width:75px;height:75px;">
+                    </div>
+                    <h3>Dead Space</h3>
+                    <p>
+                        Petualangan-aksi
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+                <div class="service-item">
+                    <div class="testimonial-img">
+                        <img src="{% static 'front/img/ff.jpg' %}" alt="Image" style="width:75px;height:75px;">
+                    </div>
+                    <h3>Final Fantasy XVI</h3>
+                    <p>
+                        Petualangan-aksi
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+                <div class="service-item">
+                    <div class="testimonial-img">
+                        <img src="{% static 'front/img/fs.jpg' %}" alt="Image" style="width:75px;height:75px;">
+                    </div>
+                    <h3>Forspoken</h3>
+                    <p>
+                        Petualangan-aksi
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+                <div class="service-item">
+                    <div class="testimonial-img">
+                        <img src="{% static 'front/img/sb.jpg' %}" alt="Image" style="width:75px;height:75px;">
+                    </div>
+                    <h3>Skull & Bones</h3>
+                    <p>
+                        Tembak Menembak
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+                <div class="service-item">
+                    <div class="testimonial-img">
+                        <img src="{% static 'front/img/wh.jpg' %}" alt="Image" style="width:75px;height:75px;">
+                    </div>
+                    <h3>Wild Hearts</h3>
+                    <p>
+                        Tembak Menembak
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+                <div class="service-item">
+                    <div class="testimonial-img">
+                        <img src="{% static 'front/img/di.jpg' %}" alt="Image" style="width:75px;height:75px;">
+                    </div>
+                    <h3>Dead Island 2</h3>
+                    <p>
+                        Tembak Menembak
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+{% endblock content %}

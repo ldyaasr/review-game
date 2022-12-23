@@ -1,0 +1,48 @@
+{% extends 'front/base.html' %}
+{% load static %}
+
+{% block content %}
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>New Games</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">New Games </a>
+                    <br><br>    
+                    </div>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Genre</th>
+                            <th scope="col">Rilis</th>
+                            <th scope="col">Pengembang</th>
+                            <th scope="col">Platform</th>
+                          </tr>
+                        </thead>
+                        {% for n in nlist %}
+                        <tbody>
+                          <tr>
+                            <td>{{ n.nama }}</td>
+                            <td>{{ n.genre }}</td>
+                            <td>{{ n.rilis }}</td>
+                            <td>{{ n.pengembang }}</td>
+                            <td>{{ n.platform }}</td>
+                          </tr>
+                        {% endfor %}
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+      </div>
+        <!-- Page Header End -->
+
+
+       
+
+{% endblock content %}

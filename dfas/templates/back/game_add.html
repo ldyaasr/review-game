@@ -1,0 +1,98 @@
+{% load static %}
+
+{% block content %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'add/fonts/icomoon/style.css' %}">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'add/css/bootstrap.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'add/css/style.css' %}">
+
+    <title>Silahkan Isi</title>
+  </head>
+  <body>
+  
+
+<div class="content">
+    
+    <div class="container">
+      <div class="row align-items-stretch no-gutters contact-wrap">
+        <div class="col-md-12">
+          <div class="form h-100">
+            <h3>Silahkan Isi</h3>
+            <form class="mb-5" method="POST" name="contactForm">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 form-group mb-3">
+                  <label for="nama" class="col-form-label">Nama</label>
+                  <input type="text" class="form-control" name="nama" placeholder="nama game" value="{{ get_new.nama }}">
+                </div>
+                
+              <div class="row">
+                <div class="col-md-12 form-group mb-3">
+                    <label for="genre" class="form-control">Genre</label>
+                    <select class="custom-select" name="genre">
+                            {% for genre in genre %}
+                            <option value="{{ genre.nama }}">{{ genre.nama }}</option>
+                            {% endfor %}
+                    </select>
+                </div>
+              </div>
+
+              <div class="col-md-6 form-group mb-3">
+                <form action="https://example.com">
+                    <label class="form-control">
+                      Rilis:
+                      <input type="date" name="rilis" />{{ get_new.rilis }}
+                    </label>
+              </div>
+             
+            <div class="col-md-6 form-group mb-3">
+                <label for="pengembang" class="col-form-label">Pengembang</label>
+                <input type="text" class="form-control" name="pengembang" placeholder="pengembang" value="{{ get_new.pengembang }}">
+              </div>
+            </div>
+
+            <div class="col-md-6 form-group mb-3">
+                <label for="platform" class="col-form-label">Platform</label>
+                <input type="text" class="form-control" name="platform" placeholder="platform" value="{{ get_new.platform }}">
+              </div>
+            </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-11 form-group">
+                  <input type="submit" value="Kirim" class="btn btn-primary rounded-0 py-2 px-4">
+                  <span class="submitting"></span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    
+    
+
+    <script src="{% static 'add/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'add/js/popper.min.js' %}"></script>
+    <script src="{% static 'add/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'add/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'add/js/main.js' %}"></script>
+
+  </body>
+</html>
+
+{% endblock content %}
